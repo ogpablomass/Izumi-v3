@@ -19,22 +19,22 @@ const DATABASE_URL = process.env.DATABASE_URL === undefined ? './database.db' : 
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
 // Export configuration variables
 module.exports = {
-  HANDLERS: (process.env.PREFIX || '^[.,!]').trim(),
+  HANDLERS: (process.env.PREFIX || [.]trim(),
   BRANCH: "main",
   MODE: (process.env.MODE || 'private').toLowerCase(),
   ERROR_MSG: toBool(process.env.ERROR_MSG) || true,
   LOG_MSG: toBool(process.env.LOG_MSG) || true,
-  READ_CMD: toBool(process.env.READ_CMD),
+  READ_CMD: toBool(process.env.READ_CMD)||true,
   SESSION_ID: process.env.SESSION_ID || "izumi~axXsHCUP",
-  MENU_URL: process.env.MENU_URL || "https://ik.imagekit.io/eypz/1722873079279_lHOJlrddC.png",
+  MENU_URL: process.env.MENU_URL || "https://files.catbox.moe/ydqi4n.jpeg",
   CAPTION: process.env.CAPTION || "Iᴢᴜᴍɪ",
-  READ_MSG: toBool(process.env.READ_MSG),
+  READ_MSG: toBool(process.env.READ_MSG)||true,
   OWNER_NAME: process.env.OWNER_NAME || "⋆✮⃝🚩𝚸𝚫𝚩𝐋𝚯⋆✮⃝🚩"
   BOT_NAME: process.env.BOT_NAME || "꧁۞𝚸𝚫𝚩𝐋𝚯۞꧂"
   SUDO: process.env.SUDO || null,
   LANG: process.env.LANGUAGE === undefined ? 'EN' : process.env.LANGUAGE.toUpperCase(),
   STICKER_PACKNAME: process.env.STICKER_PACKNAME || "⋆⏤͟͟͞͞✮⃝🚩ᴰᴶ᭄ Ｐᴀ ᏼ ⳑｏ࿐⋆⏤͟͟͞͞✮⃝🚩",
-  AUDIO_DATA: process.env.AUDIO_DATA || "Eʏᴘᴢ;Iᴢᴜᴍɪ-ᴠ3;https://i.imgur.com/cO0TZJv.jpeg",
+  AUDIO_DATA: process.env.AUDIO_DATA || "⋆⏤͟͟͞͞✮⃝🚩𝚸𝚫𝚩𝐋𝚯⋆⏤͟͟͞͞✮⃝🚩;https://files.catbox.moe/ydqi4n.jpeg",
   PROCESSNAME: process.env.PROCESSNAME || "𝚸𝚫𝚩𝐋𝚯",
   AUTHOR: process.env.AUTHOR || "Eypz God",
   DELETED_LOG_CHAT: process.env.DELETED_LOG_CHAT || false,
